@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "notsocompany-com-web",
+  "main": "worker/index.ts",
+  "compatibility_date": "2025-09-01",
+  // every subdomain of both zones, like nsb.gg: notsocompany.com is the pages in dist/, www.notsocompany.com and
+  // (www.)notso.company redirect to it with the path kept, anything else 404s (see the worker).
+  // oasis.notsocompany.com (umami) is left out by a "no worker" route on the zone, which wrangler can't set (see the readme)
+  "routes": [
+    {"pattern": "*notsocompany.com/*", "zone_name": "notsocompany.com"},
+    {"pattern": "*notso.company/*", "zone_name": "notso.company"}
+  ],
+  "workers_dev": false,
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // every request runs the worker first, otherwise notso.company/ would get the page instead of the redirect
+    "run_worker_first": true
+  }
+}

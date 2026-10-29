@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* same tokens as notsobot.com and nsb.gg (notsobot.com-web/src/index.css), only the ones this page uses */
+@theme {
+  /* the fontsource packages' names (imported in main.tsx) */
+  --font-sans: "Figtree Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Bricolage Grotesque Variable", var(--font-sans);
+
+  /* surfaces (Discord dark palette) */
+  --color-bg: #36393f;
+  --color-surface: #2f3136;
+  --color-surface-2: #34373c;
+  --color-surface-3: #40444b;
+  --color-deep: #202225;
+  --color-line: #202225;
+  --color-line-strong: #42444d;
+
+  /* text */
+  --color-fg: #dcddde;
+  --color-muted: #b9bbbe;
+  --color-subtle: #a7aaae;
+
+  /* brand */
+  --color-brand: #5865f2;
+  --color-brand-hover: #4752c4;
+  --color-brand-text: #a5abff;
+}
+
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-brand) 40%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+}
+
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold
+      transition-colors duration-150 cursor-pointer select-none;
+  }
+  .btn-primary {
+    @apply bg-brand text-white hover:bg-brand-hover;
+  }
+  .btn-secondary {
+    @apply bg-surface-3 text-white hover:bg-line-strong;
+  }
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+}

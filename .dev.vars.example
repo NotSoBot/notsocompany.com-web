@@ -1,0 +1,4 @@
+# the worker's secrets. copy to .dev.vars: `npm run preview:worker` reads it and `npm run deploy` uploads it
+
+# notsocompany.com's website id from oasis.notsocompany.com's website settings, empty leaves analytics off
+UMAMI_WEBSITE_ID=
