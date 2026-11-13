@@ -2,7 +2,7 @@
   "name": "notsocompany.com-web",
   "description": "notsocompany.com's cf worker",
   "author": "cakedan",
-  "license": "MPL-2.0",
+  "license": "MIT",
   "private": true,
   "version": "0.1.0",
   "type": "module",
