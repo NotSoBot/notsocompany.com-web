@@ -34,15 +34,30 @@ const router = new FetchRouter();
 const site = new DomainRouter(SITE_DOMAIN);
 site.route('/:path...', '*', async (event) => {
   const env = event.environment as Env;
-  const response = await env.ASSETS.fetch(event.request);
+  // a page's etag is the built file's, which doesn't cover the tracker added below, so a page cached before
+  // UMAMI_WEBSITE_ID was set, changed or removed would keep getting 304s. pages are always sent in full and without
+  // an etag instead (they're tiny), whether analytics are on or not. everything else keeps its etag and 304s
+  let request = event.request;
+  if (request.headers.get('accept')?.includes('text/html')) {
+    request = new Request(request);
+    request.headers.delete('if-none-match');
+    request.headers.delete('if-modified-since');
+  }
+  const response = await env.ASSETS.fetch(request);
+  if (!response.headers.get('content-type')?.startsWith('text/html')) {
+    return response;
+  }
+  const page = new Response(response.body, response);
+  page.headers.delete('etag');
+  page.headers.delete('last-modified');
   // the pages are plain built html, so the tracker goes in here rather than at build time, keeping the id in .dev.vars
-  if (env.UMAMI_WEBSITE_ID && response.headers.get('content-type')?.startsWith('text/html')) {
+  if (env.UMAMI_WEBSITE_ID) {
     const script = `<script defer data-website-id="${escapeAttribute(env.UMAMI_WEBSITE_ID)}" src="${UMAMI_SCRIPT_URL}"></script>`;
     return new HTMLRewriter()
       .on('head', {element: (head) => { head.append(script, {html: true}); }})
-      .transform(response);
+      .transform(page);
   }
-  return response;
+  return page;
 });
 router.addRouter(site);
 
