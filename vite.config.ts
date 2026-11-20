@@ -12,7 +12,7 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     sourcemap: false,
-    rollupOptions: {
+    rolldownOptions: {
       // one html per page, so each has its own title and metatags without the worker filling them in
       input: {
         index: 'index.html',
