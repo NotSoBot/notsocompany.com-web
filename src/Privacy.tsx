@@ -55,8 +55,15 @@ export function Privacy() {
             <li>your approximate location (country, region and city), worked out from your IP address</li>
           </ul>
           <p>
-            On notsobot.com it also records when you add NotSoBot to a server through the website, along with which part of the site the invite came from.
+            On notsobot.com it also records when you click a button to add NotSoBot and when you finish adding it to a server, along with which part of the site or which other site the invite came from.
+            It records when you start logging in with Discord and when the login finishes, but not who logged in.
             It also records when you click a button there that opens NotSoBot's store on Discord, along with which plan or credit pack the button was for, but not who clicked it or whether anything was bought.
+          </p>
+          <p>
+            On nsb.gg it records when you download a file or click a link to NotSoBot, along with the kind of file (image, video or audio), but not which file.
+          </p>
+          <p>
+            Page addresses are shortened before they're sent: server and file IDs are left out, the language of notsobot.com's pages is recorded separately, and nothing after the address of a login page is sent.
           </p>
           <p>
             It doesn't use cookies or store anything in your browser, and it doesn't keep your IP address.
