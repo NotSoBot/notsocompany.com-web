@@ -35,7 +35,7 @@ function NotSoBot() {
       </a>
       <p className='max-w-sm text-sm text-muted'>The Discord bot for editing images, gifs, audio and video, with tags, music and moderation.</p>
       <div className='flex flex-wrap justify-center gap-2'>
-        <a className='btn btn-primary btn-sm' href='https://notsobot.com/invite'>
+        <a className='btn btn-primary btn-sm' href='https://notsobot.com/invite?src=company'>
           <Plus className='size-4'/>
           Add NotSoBot
         </a>

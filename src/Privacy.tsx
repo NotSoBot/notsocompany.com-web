@@ -7,7 +7,7 @@ import { LINK_CLASS_NAME, Page } from './Layout';
 
 // privacy.html's title and description say the same, keep them in sync
 export const PRIVACY_TITLE = 'Privacy Policy';
-export const PRIVACY_UPDATED = 'October 29, 2026';
+export const PRIVACY_UPDATED = 'November 22, 2026';
 
 // the address NotSoBot's terms and privacy policy give for the company
 const COMPANY_ADDRESS = '254 Chapman Rd, Ste 208 #8692 Newark, Delaware 19702';
@@ -56,6 +56,7 @@ export function Privacy() {
           </ul>
           <p>
             On notsobot.com it also records when you add NotSoBot to a server through the website, along with which part of the site the invite came from.
+            It also records when you click a button there that opens NotSoBot's store on Discord, along with which plan or credit pack the button was for, but not who clicked it or whether anything was bought.
           </p>
           <p>
             It doesn't use cookies or store anything in your browser, and it doesn't keep your IP address.
