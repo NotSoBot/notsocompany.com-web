@@ -63,7 +63,7 @@ export function Privacy() {
             On nsb.gg it records when you download a file or click a link to NotSoBot, along with the kind of file (image, video or audio), but not which file.
           </p>
           <p>
-            Page addresses are shortened before they're sent: server and file IDs are left out, the language of notsobot.com's pages is recorded separately, and nothing after the address of a login page is sent.
+            Page addresses are shortened before they're sent: server, member and file IDs and anything typed into a search box are left out, the language of notsobot.com's pages is recorded separately, and nothing after the address of a login page is sent.
           </p>
           <p>
             It doesn't use cookies or store anything in your browser, and it doesn't keep your IP address.
