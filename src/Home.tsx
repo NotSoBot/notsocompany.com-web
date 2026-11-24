@@ -48,7 +48,7 @@ function NotSoBot() {
           <ArrowUpRight className='size-4'/>
         </a>
       </div>
-      {/* NotSoBot's own terms and privacy policy, they name NotSoCompany as its operator */}
+      {/* NotSoBot's own terms and privacy policy, they name Not So LLC (d/b/a NotSoCompany) as its operator */}
       <nav className='flex items-center gap-2 text-xs text-subtle'>
         <a className={LINK_CLASS_NAME} href='https://notsobot.com/legal/tos'>Terms</a>
         <span aria-hidden='true'>·</span>

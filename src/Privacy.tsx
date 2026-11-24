@@ -1,13 +1,13 @@
 import type { ReactNode } from 'react';
 
 import companyLogo from './assets/logos/NotSoCompanyLogo.svg';
-import { ANALYTICS_DOMAIN, COMPANY_NAME, CONTACT_EMAIL } from './constants';
+import { ANALYTICS_DOMAIN, COMPANY_NAME, CONTACT_EMAIL, LEGAL_NAME } from './constants';
 import { LINK_CLASS_NAME, Page } from './Layout';
 
 
 // privacy.html's title and description say the same, keep them in sync
 export const PRIVACY_TITLE = 'Privacy Policy';
-export const PRIVACY_UPDATED = 'November 22, 2026';
+export const PRIVACY_UPDATED = 'November 24, 2026';
 
 // the address NotSoBot's terms and privacy policy give for the company
 const COMPANY_ADDRESS = '254 Chapman Rd, Ste 208 #8692 Newark, Delaware 19702';
@@ -34,7 +34,7 @@ export function Privacy() {
         </p>
 
         <Section title='Who we are'>
-          <p>{COMPANY_NAME}, {COMPANY_ADDRESS}. We run NotSoBot, notsobot.com and nsb.gg.</p>
+          <p>{LEGAL_NAME} (doing business as {COMPANY_NAME}), a Delaware limited liability company, {COMPANY_ADDRESS}. We run NotSoBot, notsobot.com and nsb.gg.</p>
         </Section>
 
         <Section title='notsocompany.com'>
