@@ -1,7 +1,8 @@
-import { ArrowUpRight, Plus } from 'lucide-react';
+import { ArrowUpRight, Gamepad2, Plus } from 'lucide-react';
 
 import companyLogo from './assets/logos/NotSoCompanyLogo.svg';
 import notSoBotLogo from './assets/logos/NotSoLogo.svg';
+import notSoGamesLogo from './assets/logos/NotSoGamesLogo.svg';
 import { COMPANY_NAME } from './constants';
 import { LINK_CLASS_NAME, Page } from './Layout';
 import { useLogoEffect } from './lib/logoEffects';
@@ -18,6 +19,7 @@ export function Home() {
       <section className='flex flex-col items-center gap-3 px-4 pt-4 pb-4'>
         <h2 className='font-sans text-xs font-semibold tracking-wide text-subtle uppercase'>What we own</h2>
         <NotSoBot/>
+        <NotSoGames/>
       </section>
     </Page>
   );
@@ -54,6 +56,31 @@ function NotSoBot() {
         <span aria-hidden='true'>·</span>
         <a className={LINK_CLASS_NAME} href='https://notsobot.com/legal/privacy'>Privacy</a>
       </nav>
+    </article>
+  );
+}
+
+
+// notsogames.com: NotSoBot's games in the browser, signed in with Discord or as a guest. Its mark is the NSG one the games
+// site's navbar uses (notsobot.com-web src/assets/logos/NotSoGamesLogo.svg), a placeholder for now. notso.games redirects to it
+function NotSoGames() {
+  return (
+    <article className='flex w-full flex-col items-center gap-3 rounded-lg bg-surface-2 px-4 py-5 text-center'>
+      <a className='flex items-center gap-2.5' href='https://notsogames.com'>
+        <img src={notSoGamesLogo} alt='' className='h-11 w-auto shrink-0'/>
+        <h3 className='font-display text-2xl font-bold text-white'>NotSoGames</h3>
+      </a>
+      <p className='max-w-sm text-sm text-muted'>NotSoBot's games in your browser, like Flag Guesser and Letter Trail. Play with your servers, with anyone, or as a guest.</p>
+      <div className='flex flex-wrap justify-center gap-2'>
+        <a className='btn btn-primary btn-sm' href='https://notsogames.com/play'>
+          <Gamepad2 className='size-4'/>
+          Play now
+        </a>
+        <a className='btn btn-secondary btn-sm' href='https://notsogames.com'>
+          notsogames.com
+          <ArrowUpRight className='size-4'/>
+        </a>
+      </div>
     </article>
   );
 }

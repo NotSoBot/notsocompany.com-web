@@ -19,7 +19,7 @@ const SITE_DOMAIN = 'notsocompany.com';
 // short and www domains that only redirect to SITE_DOMAIN, keeping the path and query (notso.company/ -> notsocompany.com/)
 const REDIRECT_DOMAINS = ['notso.company', 'www.notso.company', `www.${SITE_DOMAIN}`];
 
-// TRACKER_SCRIPT_NAME on notsobot.api's analytics-umami container, the same one notsobot.com and nsb.gg load
+// TRACKER_SCRIPT_NAME on notsobot.api's analytics-umami container, the same one notsobot.com, notsogames.com and nsb.gg load
 const UMAMI_SCRIPT_URL = 'https://oasis.notsocompany.com/drink.js';
 
 

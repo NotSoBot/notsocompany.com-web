@@ -7,7 +7,7 @@ import { LINK_CLASS_NAME, Page } from './Layout';
 
 // privacy.html's title and description say the same, keep them in sync
 export const PRIVACY_TITLE = 'Privacy Policy';
-export const PRIVACY_UPDATED = 'November 24, 2026';
+export const PRIVACY_UPDATED = 'November 27, 2026';
 
 // the address NotSoBot's terms and privacy policy give for the company
 const COMPANY_ADDRESS = '254 Chapman Rd, Ste 208 #8692 Newark, Delaware 19702';
@@ -15,7 +15,7 @@ const COMPANY_ADDRESS = '254 Chapman Rd, Ste 208 #8692 Newark, Delaware 19702';
 const LINK = `text-brand-text ${LINK_CLASS_NAME}`;
 
 
-// notsocompany.com/privacy: this site, and the analytics it, notsobot.com and nsb.gg load from oasis.notsocompany.com.
+// notsocompany.com/privacy: this site, and the analytics it, notsobot.com, notsogames.com and nsb.gg load from oasis.notsocompany.com.
 // NotSoBot itself (the bot, the dashboard, logging in) is covered by notsobot.com/legal/privacy
 export function Privacy() {
   return (
@@ -29,7 +29,7 @@ export function Privacy() {
       </header>
       <article className='flex flex-col gap-6 px-5 pt-5 pb-6 text-sm leading-relaxed text-muted sm:px-8'>
         <p>
-          This policy covers notsocompany.com and the website analytics on notsocompany.com, notsobot.com and nsb.gg, which run on {ANALYTICS_DOMAIN}.
+          This policy covers notsocompany.com and the website analytics on notsocompany.com, notsobot.com, notsogames.com and nsb.gg, which run on {ANALYTICS_DOMAIN}.
           NotSoBot itself, meaning the bot, its dashboard and logging in with Discord, is covered by <a className={LINK} href='https://notsobot.com/legal/privacy'>NotSoBot's Privacy Policy</a>.
         </p>
 
@@ -44,7 +44,7 @@ export function Privacy() {
           </p>
         </Section>
 
-        <Section title='Analytics on notsocompany.com, notsobot.com and nsb.gg'>
+        <Section title='Analytics on notsocompany.com, notsobot.com, notsogames.com and nsb.gg'>
           <p>
             We count visits with <a className={LINK} href='https://umami.is'>Umami</a>, an open-source analytics tool that we host ourselves at {ANALYTICS_DOMAIN}.
             For each page view it records:
@@ -88,7 +88,7 @@ export function Privacy() {
 
         <Section title='Your choices'>
           <p>
-            You can block {ANALYTICS_DOMAIN} with any content blocker, and notsocompany.com, notsobot.com and nsb.gg work the same without it.
+            You can block {ANALYTICS_DOMAIN} with any content blocker, and notsocompany.com, notsobot.com, notsogames.com and nsb.gg work the same without it.
           </p>
         </Section>
 
