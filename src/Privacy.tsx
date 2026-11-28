@@ -24,10 +24,10 @@ export function Privacy() {
         <a href='/' aria-label={COMPANY_NAME}>
           <img src={companyLogo} alt='' className='w-24'/>
         </a>
-        <h1 className='text-2xl font-bold text-white'>{PRIVACY_TITLE}</h1>
+        <h1 className='text-2xl font-semibold text-white'>{PRIVACY_TITLE}</h1>
         <p className='text-xs text-subtle'>Last updated {PRIVACY_UPDATED}</p>
       </header>
-      <article className='flex flex-col gap-6 px-5 pt-5 pb-6 text-sm leading-relaxed text-muted sm:px-8'>
+      <article className='flex flex-col gap-6 px-5 pt-5 pb-6 text-sm leading-relaxed text-muted sm:px-8 [&_p]:max-w-prose'>
         <p>
           This policy covers notsocompany.com and the website analytics on notsocompany.com, notsobot.com, notsogames.com and nsb.gg, which run on {ANALYTICS_DOMAIN}.
           NotSoBot itself, meaning the bot, its dashboard and logging in with Discord, is covered by <a className={LINK} href='https://notsobot.com/legal/privacy'>NotSoBot's Privacy Policy</a>.
@@ -107,7 +107,7 @@ export function Privacy() {
 function Section({ title, children }: {title: string, children: ReactNode}) {
   return (
     <section className='flex flex-col gap-2'>
-      <h2 className='text-lg font-bold text-white'>{title}</h2>
+      <h2 className='text-lg font-semibold text-white'>{title}</h2>
       {children}
     </section>
   );

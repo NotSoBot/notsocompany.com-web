@@ -14,10 +14,10 @@ export function Home() {
     <Page>
       <header className='flex flex-col items-center gap-3 rounded-t-lg bg-deep px-8 py-10 text-center'>
         <img src={companyLogo} alt='' className='w-36'/>
-        <h1 className='text-2xl font-bold text-white'>{COMPANY_NAME}</h1>
+        <h1 className='text-2xl font-semibold text-white'>{COMPANY_NAME}</h1>
       </header>
       <section className='flex flex-col items-center gap-3 px-4 pt-4 pb-4'>
-        <h2 className='font-sans text-xs font-semibold tracking-wide text-subtle uppercase'>What we own</h2>
+        <h2 className='font-sans text-sm font-semibold text-subtle'>What we own</h2>
         <NotSoBot/>
         <NotSoGames/>
       </section>
@@ -33,7 +33,7 @@ function NotSoBot() {
     <article className='flex w-full flex-col items-center gap-3 rounded-lg bg-surface-2 px-4 py-5 text-center'>
       <a className='flex items-center gap-2.5' href='https://notsobot.com' {...handlers}>
         <img src={effect ?? notSoBotLogo} alt='' className='size-11 shrink-0 object-contain'/>
-        <h3 className='font-display text-2xl font-bold text-white'>NotSoBot</h3>
+        <h3 className='font-display text-2xl font-semibold text-white'>NotSoBot</h3>
       </a>
       <p className='max-w-sm text-sm text-muted'>The Discord bot for editing images, gifs, audio and video, with tags, music and moderation.</p>
       <div className='flex flex-wrap justify-center gap-2'>
@@ -68,7 +68,7 @@ function NotSoGames() {
     <article className='flex w-full flex-col items-center gap-3 rounded-lg bg-surface-2 px-4 py-5 text-center'>
       <a className='flex items-center gap-2.5' href='https://notsogames.com'>
         <img src={notSoGamesLogo} alt='' className='h-11 w-auto shrink-0'/>
-        <h3 className='font-display text-2xl font-bold text-white'>NotSoGames</h3>
+        <h3 className='font-display text-2xl font-semibold text-white'>NotSoGames</h3>
       </a>
       <p className='max-w-sm text-sm text-muted'>NotSoBot's games in your browser, like Flag Guesser and Letter Trail. Play with your servers, with anyone, or as a guest.</p>
       <div className='flex flex-wrap justify-center gap-2'>
